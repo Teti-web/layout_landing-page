@@ -6,7 +6,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <title>BOSE</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="src/styles/main.scss"
@@ -17,6 +30,103 @@
     ></script>
   </head>
   <body>
-    <h1>Landing Page</h1>
+    <header class="header">
+      <div class="header__top">
+        <a
+          href="#"
+          class="header__logo"
+        >
+          <img
+            src="src/images/logo.png"
+            alt="logo"
+            class="header__logo-img"
+          />
+        </a>
+        <div class="header__top-right">
+          <a
+            href="tel:+1 234 555-55-55"
+            class="icon icon--phone"
+          ></a>
+          <a
+            href="#menu"
+            class="icon icon--menu"
+          ></a>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <h1 class="header__title">Bring joy back to the everyday</h1>
+      </div>
+    </header>
+    <aside
+      class="menu"
+      id="menu"
+    >
+      <div class="menu__top">
+        <a
+          href="#"
+          class="menu__logo"
+        >
+          <img
+            src="src/images/logo.png"
+            alt="logo"
+            class="menu__logo-img"
+          />
+        </a>
+        <a
+          href="#"
+          class="icon icon--close"
+        ></a>
+      </div>
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a
+              href="#recommended"
+              class="menu__link"
+            >
+              Recommended
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              href="#categories"
+              class="menu__link"
+            >
+              Categories
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              href="#about-us"
+              class="menu__link"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              href="#contact-us"
+              class="menu__link"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu__bottom">
+        <a
+          href="tel:+1 234 5555-55-55"
+          class="menu__link-text menu__link-text--underline"
+        >
+          +1 234 5555-55-55
+
+          <span>call to order</span>
+        </a>
+      </div>
+    </aside>
+
+    <main></main>
+
+    <footer></footer>
   </body>
 </html>
