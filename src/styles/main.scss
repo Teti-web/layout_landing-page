@@ -3,12 +3,17 @@
 @use './blocks/icon' as *;
 @use './blocks/header' as *;
 @use './blocks/menu' as *;
+@use './blocks/recommended' as *;
 
 /* RESET */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,4 +35,29 @@ p {
 
 a {
   text-decoration: none;
+}
+
+/* GLOBAL STYLES */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-base-page;
+  padding-top: $gap-base-page;
+}
+
+.page__title {
+  font-family: $font-space-grotesk;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  color: $main;
+
+  @include on-tablet {
+    font-size: 40px;
+  }
+
+  @include on-desktop {
+    font-size: 48px;
+  }
 }
