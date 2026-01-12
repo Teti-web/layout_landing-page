@@ -45,6 +45,8 @@
     justify-content: center;
     width: 100%;
     max-width: 120px;
+
+    cursor: pointer;
     transition: $transition-base;
 
     @include on-tablet {
@@ -91,6 +93,7 @@
     font-family: $font-space-grotesk;
     position: relative;
     letter-spacing: 2px;
+    cursor: pointer;
 
     &::after {
       content: '';
