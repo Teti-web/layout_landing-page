@@ -130,4 +130,8 @@ a {
   &--textarea {
     min-height: 148px;
   }
+
+  &--error {
+    border-color: $error;
+  }
 }

@@ -28,6 +28,13 @@
     gap: 20px;
   }
 
+  &__form-label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   &__form-textarea {
     margin-bottom: 10px;
   }
@@ -98,5 +105,44 @@
         display: none;
       }
     }
+  }
+
+  &__success-message {
+    grid-column: 1/-1;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+
+    background-color: $white;
+    border: 1px solid $border;
+    z-index: 100;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    @include on-tablet {
+      max-width: 600px;
+      padding: 40px;
+    }
+
+    &--visible {
+      display: flex;
+    }
+  }
+
+  &__success-message-text {
+    font-size: 16px;
+    font-family: $font-space-mono;
+    color: $main;
+    text-align: center;
   }
 }

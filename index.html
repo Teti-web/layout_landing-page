@@ -306,27 +306,45 @@
     >
       <h2 class="footer__title page__title">Contact us</h2>
       <div class="footer__form-wrapper">
-        <form class="footer__form">
-          <input
-            type="text"
-            name="name"
-            class="input"
-            placeholder="Name"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            class="input"
-            placeholder="Email"
-            required
-          />
-          <textarea
-            name="message"
-            class="input input--textarea footer__form-textarea"
-            placeholder="Message"
-            required
-          ></textarea>
+        <form
+          class="footer__form"
+          novalidate
+        >
+          <label
+            for="name"
+            class="footer__form-label"
+          >
+            <input
+              type="text"
+              name="name"
+              class="input"
+              placeholder="Name"
+              required
+            />
+          </label>
+          <label
+            for="email"
+            class="footer__form-label"
+          >
+            <input
+              type="email"
+              name="email"
+              class="input"
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label
+            for="message"
+            class="footer__form-label"
+          >
+            <textarea
+              name="message"
+              class="input input--textarea footer__form-textarea"
+              placeholder="Message"
+              required
+            ></textarea>
+          </label>
           <button
             type="submit"
             class="cta"
@@ -365,6 +383,19 @@
           </p>
         </div>
       </address>
+      <div class="footer__success-message">
+        <p class="footer__success-message-text">
+          Thank you for your message!
+          <br />
+          We will get back to you as soon as possible.
+        </p>
+        <a
+          href="#"
+          class="footer__success-message-link cta"
+        >
+          Back to the top
+        </a>
+      </div>
     </footer>
   </body>
 </html>
