@@ -135,3 +135,24 @@ a {
     border-color: $error;
   }
 }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(8%);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+  will-change: opacity, transform;
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+  }
+}

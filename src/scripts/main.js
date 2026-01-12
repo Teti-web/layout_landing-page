@@ -227,3 +227,56 @@ if (successMessage) {
     });
   });
 }
+
+// Reveal on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const revealElements = document.querySelectorAll('[data-reveal]');
+
+  if (!revealElements.length) {
+    return;
+  }
+
+  const prefersReduced =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReduced) {
+    revealElements.forEach((el) => {
+      el.classList.add('reveal', 'reveal--visible');
+    });
+
+    return;
+  }
+
+  revealElements.forEach((el) => {
+    el.classList.add('reveal');
+  });
+
+  const hasWindow = typeof window !== 'undefined';
+  const hasIO = hasWindow && 'IntersectionObserver' in window;
+
+  if (!hasIO) {
+    revealElements.forEach((el) => {
+      el.classList.add('reveal--visible');
+    });
+
+    return;
+  }
+
+  const observer = new window.IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -10% 0px',
+    },
+  );
+
+  revealElements.forEach((el) => observer.observe(el));
+});

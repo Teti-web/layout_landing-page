@@ -7,6 +7,10 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>BOSE</title>
+    <meta
+      name="description"
+      content="Bose is a company that makes headphones, speakers, and other audio equipment."
+    />
     <link
       rel="icon"
       href="src/images/logo.png"
@@ -73,7 +77,7 @@
         >
           <img
             src="src/images/logo.png"
-            alt="logo"
+            alt="The Nothing (R) brand logo rendered in a black dot-matrix, pixelated typography style."
             class="menu__logo-img"
           />
         </a>
@@ -135,13 +139,14 @@
       <section
         class="recommended"
         id="recommended"
+        data-reveal
       >
         <h2 class="recommended__title page__title">Recommended</h2>
         <div class="recommended__content">
           <article class="recommended__item">
             <img
               src="src/images/recommended/recommended-1.jpg"
-              alt="recommended"
+              alt="A close-up of the upper back of a white Nothing Phone, showing the dual-lens camera system and illuminated Glyph Interface LED strips integrated into the transparent casing."
               class="recommended__item-img"
             />
             <h3 class="recommended__item-title">Phone (1)</h3>
@@ -154,7 +159,7 @@
           <article class="recommended__item">
             <img
               src="src/images/recommended/recommended-2.jpg"
-              alt="recommended"
+              alt="A pair of Nothing Ear (2) wireless earbuds with transparent stems resting inside their signature square, transparent charging case against a light gray background."
               class="recommended__item-img"
             />
             <h3 class="recommended__item-title">Ear (2)</h3>
@@ -167,7 +172,7 @@
           <article class="recommended__item">
             <img
               src="src/images/recommended/recommended-3.jpg"
-              alt="recommended"
+              alt="The Nothing Ear (stick) wireless earbuds presented inside a vertical, cylindrical transparent charging case featuring a distinct red base."
               class="recommended__item-img"
             />
             <h3 class="recommended__item-title">Ear (stick)</h3>
@@ -184,6 +189,7 @@
       <section
         class="categories"
         id="categories"
+        data-reveal
       >
         <h2 class="categories__title page__title">Categories</h2>
         <div class="categories__content">
@@ -194,7 +200,7 @@
             >
               <img
                 src="src/images/categories/categories-1.jpg"
-                alt="categories"
+                alt="Two blue and white budgies perched together on the top edge of a white Nothing Phone against a light gray background."
                 class="categories__item-img"
               />
             </a>
@@ -204,7 +210,7 @@
             >
               <img
                 src="src/images/categories/categories-2.jpg"
-                alt="categories"
+                alt="A hand holding an open, transparent square case containing white wireless earbuds."
                 class="categories__item-img"
               />
             </a>
@@ -218,7 +224,7 @@
             >
               <img
                 src="src/images/categories/categories-3.jpg"
-                alt="categories"
+                alt="A detailed view of a single white Nothing Ear (2) earbud, highlighting its transparent stem and internal black components."
                 class="categories__item-img"
               />
             </a>
@@ -228,7 +234,7 @@
             >
               <img
                 src="src/images/categories/categories-4.jpg"
-                alt="categories"
+                alt="A hand holding a cylindrical, transparent charging case for Nothing Ear (stick) earbuds vertically."
                 class="categories__item-img"
               />
             </a>
@@ -242,7 +248,7 @@
             >
               <img
                 src="src/images/categories/categories-5.jpg"
-                alt="categories"
+                alt="Perspective view of a black Nothing Phone lying flat, showing its transparent back design, circular wireless charging coil, and internal mechanical textures."
                 class="categories__item-img"
               />
             </a>
@@ -252,7 +258,7 @@
             >
               <img
                 src="src/images/categories/categories-6.jpg"
-                alt="categories"
+                alt="A front-facing view of a white, minimalist Nothing Power wall charger with two metallic prongs."
                 class="categories__item-img"
               />
             </a>
@@ -271,12 +277,19 @@
       <section
         class="about-us"
         id="about-us"
+        data-reveal
       >
-        <img
-          src="src/images/about-us.jpg"
-          class="about-us__img"
-          alt="about us"
-        />
+        <picture class="about-us__img">
+          <source
+            srcset="src/images/about-us.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="src/images/about-us-mobile.jpg"
+            class="about-us__img"
+            alt="A macro, high-detail close-up of the internal components of a Nothing device, showing matte black textures, circular wireless charging coils, and precise industrial design patterns."
+          />
+        </picture>
         <div class="about-us__content-wrapper">
           <h2 class="about-us__title page__title">About us</h2>
 
@@ -303,6 +316,7 @@
     <footer
       class="footer"
       id="contact-us"
+      data-reveal
     >
       <h2 class="footer__title page__title">Contact us</h2>
       <div class="footer__form-wrapper">
