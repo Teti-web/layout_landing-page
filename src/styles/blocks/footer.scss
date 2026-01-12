@@ -7,6 +7,10 @@
 
   padding-bottom: $gap-section;
 
+  @include on-tablet {
+    padding-bottom: $gap-base-page;
+  }
+
   &__title {
     grid-column: 1/-1;
   }
@@ -96,14 +100,6 @@
     &:hover::after {
       width: 100%;
       opacity: 1;
-    }
-
-    &--address {
-      cursor: default;
-
-      &::after {
-        display: none;
-      }
     }
   }
 

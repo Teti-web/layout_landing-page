@@ -19,22 +19,36 @@
     }
   }
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    @include on-desktop {
-      flex: 1;
-    }
-  }
-
   &__item-img {
     display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
+
+    transition: $transition-base;
+  }
+
+  &__link {
+    @include on-desktop {
+      flex: 1;
+    }
+
+    &:hover {
+      .recommended__item-img {
+        scale: 1.2;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item-img-wrapper {
+    overflow: hidden;
     border-radius: 4px;
     aspect-ratio: 1 / 1;
   }

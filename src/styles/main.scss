@@ -129,6 +129,7 @@ a {
 
   &--textarea {
     min-height: 148px;
+    resize: vertical;
   }
 
   &--error {

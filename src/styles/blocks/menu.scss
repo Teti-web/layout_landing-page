@@ -24,7 +24,7 @@
     gap: 32px;
   }
 
-  &:target {
+  &--open {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);

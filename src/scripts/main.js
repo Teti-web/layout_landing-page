@@ -1,5 +1,39 @@
 'use strict';
 
+const menu = document.querySelector('.menu');
+const iconMenu = document.querySelector('.icon--menu');
+const iconClose = document.querySelector('.icon--close');
+
+if (menu && iconMenu) {
+  iconMenu.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+
+    if (menu.classList.contains('menu--open')) {
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.documentElement.style.overflow = 'auto';
+    }
+  });
+
+  if (iconClose) {
+    iconClose.addEventListener('click', () => {
+      menu.classList.remove('menu--open');
+      document.documentElement.style.overflow = 'auto';
+    });
+  }
+
+  menu.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+
+    if (!link) {
+      return;
+    }
+
+    menu.classList.remove('menu--open');
+    document.documentElement.style.overflow = 'auto';
+  });
+}
+
 const form = document.querySelector('.footer__form');
 const successMessage = document.querySelector('.footer__success-message');
 
