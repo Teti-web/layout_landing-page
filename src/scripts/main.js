@@ -1,11 +1,9 @@
 'use strict';
 
-// Get form elements (guard if form not present)
 const form = document.querySelector('.footer__form');
 const successMessage = document.querySelector('.footer__success-message');
 
 if (form) {
-  // Disable native browser validation
   form.setAttribute('novalidate', 'novalidate');
 
   const formName = form.querySelector('input[name="name"]');
@@ -87,7 +85,6 @@ if (form) {
     }
   };
 
-  // Validate email
   const isValidEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
